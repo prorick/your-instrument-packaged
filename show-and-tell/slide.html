@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbox Radar · Show &amp; Tell</title>
+<style>
+  :root {
+    --navy: #011F5B;
+    --navy-deep: #00133A;
+    --red: #990000;
+    --red-bright: #E0333A;
+    --ink: #F4F6FB;
+    --muted: #AEB9D3;
+    --line: rgba(255, 255, 255, 0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background:
+      radial-gradient(ellipse at 85% -10%, rgba(153, 0, 0, 0.35), transparent 55%),
+      radial-gradient(ellipse at -10% 110%, rgba(40, 80, 170, 0.35), transparent 55%),
+      var(--navy-deep);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    overflow: hidden;
+  }
+  .slide {
+    height: 100vh;
+    width: 100vw;
+    padding: 4.5vh 5vw;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 3.5vh;
+  }
+
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 2vw; }
+  .title {
+    font-size: clamp(28px, 3.6vw, 64px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .title .dot { color: var(--red-bright); }
+  .byline {
+    font-size: clamp(13px, 1.15vw, 20px);
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.25fr;
+    gap: 1.6vw;
+    min-height: 0;
+  }
+  .card {
+    border-top: 3px solid var(--red-bright);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 0 0 14px 14px;
+    padding: 2.6vh 1.6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6vh;
+    min-height: 0;
+  }
+  .label {
+    font-size: clamp(12px, 1vw, 17px);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .label .n { color: var(--red-bright); margin-right: 0.5em; }
+  .card p {
+    font-size: clamp(16px, 1.55vw, 28px);
+    line-height: 1.35;
+    font-weight: 500;
+  }
+  .card p.small { font-size: clamp(15px, 1.4vw, 25px); }
+  .card em { font-style: normal; color: #fff; font-weight: 700; }
+  .fix { color: var(--muted); }
+  .fix b { color: var(--ink); }
+  code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9em; color: #fff; }
+  .lesson {
+    margin-top: auto;
+    padding-top: 1.4vh;
+    border-top: 1px solid var(--line);
+    font-style: italic;
+  }
+
+  .ask {
+    background: var(--red);
+    border-radius: 18px;
+    padding: 3.4vh 3vw;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2.6vw;
+    box-shadow: 0 20px 60px rgba(153, 0, 0, 0.35);
+  }
+  .ask .label { color: rgba(255, 255, 255, 0.75); }
+  .ask .label .n { color: #fff; }
+  .ask .q {
+    font-size: clamp(26px, 3.1vw, 56px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+  }
+  .ask .q span { display: block; opacity: 0.85; font-weight: 600; font-size: 0.72em; margin-top: 0.35em; }
+</style>
+</head>
+<body>
+  <main class="slide">
+    <header>
+      <h1 class="title">Inbox Radar<span class="dot">.</span></h1>
+      <div class="byline">Prothit Halder · CIS 7000 Show &amp; Tell</div>
+    </header>
+
+    <section class="cards">
+      <article class="card">
+        <div class="label"><span class="n">01</span>What it is</div>
+        <p>My instrument goes through my Gmail to find events for me! It finds <em>homework deadlines</em> and <em>events</em>. It also notes if an event has <em>free food</em> 🍕</p>
+      </article>
+
+      <article class="card">
+        <div class="label"><span class="n">02</span>The idea behind it</div>
+        <p>It helps me think better with AI as it allows me to find events that might have <em>slipped through my inbox</em>.</p>
+      </article>
+
+      <article class="card">
+        <div class="label"><span class="n">03</span>One wrong thing + one fix</div>
+        <p class="small">Claude said my tracker was <em>empty and stopped</em>.</p>
+        <p class="small fix"><b>Fix:</b> now <code>list_tasks</code> tells it to load inbox-radar and scan Gmail.</p>
+        <p class="small lesson">A tool’s output steers what the model does next.</p>
+      </article>
+    </section>
+
+    <section class="ask">
+      <div class="label"><span class="n">04</span>Your turn</div>
+      <div class="q">How can I further improve my instrument?
+        <span>Is there any use case you think I should also include?</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
