@@ -2,7 +2,7 @@
   "mcpServers": {
     "my-server": {
       "type": "http",
-      "url": "https://YOUR-SERVICE.onrender.com/mcp"
+      "url": "https://event-tracker-0w65.onrender.com/mcp"
     }
   }
 }

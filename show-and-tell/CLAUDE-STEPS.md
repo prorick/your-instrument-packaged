@@ -9,16 +9,16 @@ not the claude.ai website: the website can't write files to your repo.)*
 ## My four answers (fill these in first)
 
 1. **What it is** — what does my instrument do?
-   > (your answer)
+   > My instrument goes through my gmail to find events for me! It finds homework deadlines, and events. It also notes if an event has free food. 
 
 2. **The idea behind it** — how does it help me think better with AI?
-   > (your answer)
+   > It helpes me think better with AI as it allows me to find events that might have slipped through my inbox.
 
 3. **One wrong thing + one fix** — what broke, and what I did about it:
-   > (your answer)
+   > One thing that didn't work was that Claude said my tracker was empty and stopped. Now list_tasks tells it to load inbox-radar and scan Gmail. A tool’s output steers what the model does next.
 
 4. **What feedback I want** — the question I'm ending my show with:
-   > (your answer)
+   > How can I further improve my instrument? Is there any use case that you think I should also include? 
 
 ## Claude: your instructions
 
